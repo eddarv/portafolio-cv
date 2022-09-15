@@ -21,6 +21,11 @@
     --max-width:1200px;
     --header-height:4rem;
 }
+            /********** global **********/
+.hidden{
+    display: none !important;
+}
+
 
             /********** Reset **********/
 
