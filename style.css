@@ -742,4 +742,9 @@ progress::-moz-progress-value{
     .services .section-title{
         grid-column: span 3;
     }
+
+    .img{
+        height: 400px;
+        width: 400px;
+    }
 }
