@@ -74,11 +74,11 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://www.formsubmit.co/edward.ramirez.developer@gmail.com",{
+        fetch("https://formsubmit.co/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
-        .then(res => (res.ok ? res.json() : Promise.reject(res)))
+        .then(res => (res.ok ? res.text() : Promise.reject(res)))
         .then(json => {
             console.log(json);
             location.hash="#gracias";
@@ -115,11 +115,11 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://www.formsubmit.co/edward.ramirez.developer@gmail.com",{
+        fetch("https://formsubmit.co/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
-        .then(res => (res.ok ? res.json() : Promise.reject(res)))
+        .then(res => (res.ok ? res.text() : Promise.reject(res)))
         .then(json => {
             console.log(json);
             location.hash="#gracias";
