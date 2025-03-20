@@ -74,7 +74,7 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://formsubmit.io/send/edward.ramirez.developer@gmail.com",{
+        fetch("https://www.formsubmit.co/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
@@ -86,6 +86,8 @@
         })
         .catch(err=>{
             console.log(err)
+            console.error("Error:", err.status, err.statusText);
+
             let message=err.statusText||"An error occurred, try again!"
             $response.querySelector(".not-hidden").innerHTML=`Error ${err.status}: ${message}`
             location.hash="#gracias";
@@ -113,7 +115,7 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://formsubmit.io/send/edward.ramirez.developer@gmail.com",{
+        fetch("https://www.formsubmit.co/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
@@ -125,6 +127,8 @@
         })
         .catch(err=>{
             console.log(err)
+            console.error("Error:", err.status, err.statusText);
+
             let message=err.statusText||"Ocurrió un error al enviar, intenta nuevamente"
             $response.querySelector(".not-hidden").innerHTML=`Error ${err.status}: ${message}`
             location.hash="#gracias";
