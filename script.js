@@ -74,9 +74,19 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
+        console.log(e.target.querySelector("input[name='name']").value)
+
         fetch("https://formsubmit.co/edward.ramirez.developer@gmail.com",{
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             method:"POST",
-            body: new FormData(e.target)
+            body: JSON.stringify({
+                name: e.target.querySelector("input[name='name']").value,
+                email: e.target.querySelector("input[name='email']").value,
+                message: e.target.querySelector("textarea[name='comments']").value,
+            })
         })
         .then(res => (res.ok ? res.text() : Promise.reject(res)))
         .then(json => {
@@ -115,9 +125,18 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
+        console.log(e.target)
         fetch("https://formsubmit.co/edward.ramirez.developer@gmail.com",{
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             method:"POST",
-            body: new FormData(e.target)
+            body: JSON.stringify({
+                name: e.target.querySelector("input[name='name']").value,
+                email: e.target.querySelector("input[name='email']").value,
+                message: e.target.querySelector("textarea[name='comments']").value,
+            })
         })
         .then(res => (res.ok ? res.text() : Promise.reject(res)))
         .then(json => {
