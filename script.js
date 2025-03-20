@@ -74,7 +74,7 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://formsubmit.co/ajax/edward.ramirez.developer@gmail.com",{
+        fetch("https://formsubmit.io/send/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
@@ -113,7 +113,7 @@
     $form.addEventListener("submit",(e)=>{
         e.preventDefault();
         $loader.classList.remove("none");
-        fetch("https://formsubmit.co/ajax/edward.ramirez.developer@gmail.com",{
+        fetch("https://formsubmit.io/send/edward.ramirez.developer@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
         })
